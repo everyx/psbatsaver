@@ -1,0 +1,85 @@
+{
+  "no": "XXX-1Q84"
+  "keyword":"lady belt",
+  "config": [
+    {
+      "name": "thumb.psd",
+      "mask": ["logo", "bg"],
+      "setting" : [
+        {
+          "size": [193, 152],
+          "saveinfo": [
+            {
+              "path": "/193x152/",
+              "directSave": true,
+              "name": "keyword+'-'+no+'-'+'thumb-193x152'"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "detail.psd",
+      "mask": ["wrap", "bg"],
+      "setting":[
+        {
+          "size": [750, 463],
+          "saveinfo": [
+            {
+              "path": "/",
+              "directSave": true,
+              "name": "keyword+'-'+no+'-'+'detail-750x463'"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "alibaba.psd",
+      "mask": ["wrap", "bg"],
+      "setting" : [
+        {
+          "size": [600, 600],
+          "saveinfo": [
+            {
+              "visibleMask": ["wrap", "bg"],
+              "path": "/600x600/alibaba/",
+              "name": "keyword+'-'+no+'-'+'alibaba-600x600'"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "normal.psd",
+      "mask": ["logo", "bg"],
+      "setting": [
+        {
+          "size": [600, 600],
+          "saveinfo": [
+            {
+              "visibleMask": ["logo", "bg"],
+              "path": "/600x600/",
+              "name": "keyword+'-'+no+'-'+'normal-600x600'"
+            },
+            {
+              "visibleMask": ["bg"],
+              "path": "/600x600/without_logo/",
+              "name": "keyword+'-'+no+'-'+'normal-without-logo-600x600'"
+            }
+          ]
+        },
+        {
+          "size": [750, 750],
+          "saveinfo": [
+            {
+              "visibleMask": ["logo", "bg"],
+              "path": "/750x750/",
+              "name": "keyword+'-'+no+'-'+'normal-750x750'"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
