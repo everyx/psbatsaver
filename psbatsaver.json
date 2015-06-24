@@ -1,0 +1,31 @@
+{
+  "autoClose": true,
+  "rules": [{
+    "target": "detail.psd",
+    "mask": ["logo", "bg"],
+    "exportSetting": [{
+      "directSave": true,
+      "savePath": "./JDLA14138/",
+      "size": [750, 463],
+      "name": "JDLA14138.detail"
+      }]
+  }, {
+    "target": "normal.psd",
+    "mask": ["logo", "bg"],
+    "exportSetting": [{
+      "savePath": "./JDLA14138/",
+      "visibleMask": ["bg"],
+      "size": [600, 600],
+      "name": "JDLA14138.600x600."
+    }]
+  }, {
+    "target": "thumb.psd",
+    "mask": ["logo", "bg"],
+    "exportSetting": [{
+      "directSave": true,
+      "savePath": "./JDLA14138/",
+      "size": [192, 151],
+      "name": "JDLA14138.thumb"
+    }]
+  }]
+}
