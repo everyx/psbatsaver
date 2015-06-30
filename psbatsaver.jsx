@@ -91,6 +91,8 @@ function exportBySetting(doc, exportSetting) {
 }
 
 function saveEachLayers(doc, exportSetting) {
+  var i = doc.layers.length-1;
+  var j = 1;
   for (var i=doc.layers.length-1; i>0; i--) {
     var currentLayer = doc.layers[i];
     if (isItemInArray(currentLayer.name, exportSetting.mask))
@@ -98,8 +100,10 @@ function saveEachLayers(doc, exportSetting) {
 
     currentLayer.visible = true;
 
-    var fileName = exportSetting.name + i + '.jpg';
+    var fileName = exportSetting.name + j++ + '.jpg';
     saveCurrentLayer(doc, exportSetting.savePath, fileName);
+
+    currentLayer.visible = false;
   }
 }
 
