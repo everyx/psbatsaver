@@ -12,9 +12,10 @@ A photoshop script to generate layer to image follow a save options config file
 1. autoClose: 是否自定关闭
 2. rules：存储个文件对应的生成规则, 为数组，其中的内容如下：
     * target：规则对应文件的 psd 文件名，包含后缀
-    * mask：特殊图层名，为数组
+    * mask：特殊图层名，为数组，直接保存时可以不设置改值
     * exportSetting：导出配置，为一数组，即一个文件，可以对应多种保存规则
         * directSave：是否直接保存
         * savePath：保存路径，使用相对路径
+        * visibleMask: 可见的特殊图层，为数组，且未 mask 的子集，不设置默认为 mask
         * size：保存的尺寸
         * name：保存的文件名

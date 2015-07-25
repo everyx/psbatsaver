@@ -117,11 +117,15 @@ function saveCurrentLayer(doc, savePath, name) {
 }
 
 function setLayerVisible(doc, mask, visibleMask, isNonMaskLayerVisible) {
+  if (isUndefinedOrNull(mask)) {
+      return
+  }
+
   var i = doc.layers.length;
   while(i--) {
     var layer = doc.layers[i];
-    if (isItemInArray(layer.name, mask) && isItemInArray(layer.name, visibleMask)) {
-      layer.visible = true;
+    if (isItemInArray(layer.name, mask)) {
+      layer.visible = isItemInArray(layer.name, visibleMask)? true : false;
     } else {
       layer.visible = isNonMaskLayerVisible;
     }
