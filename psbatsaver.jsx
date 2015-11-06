@@ -73,9 +73,13 @@ function handleDoc(doc, rule) {
 
 function exportBySetting(doc, exportSetting) {
   var state = doc.activeHistoryState;
-
-  var width = UnitValue(exportSetting.size[0], "px");
-  var height = UnitValue(exportSetting.size[1], "px");
+  
+  var width = doc.width;
+  var height = doc.height;
+  if (!isUndefinedOrNull(exportSetting.size)) {
+      width = UnitValue(exportSetting.size[0], "px");
+      height = UnitValue(exportSetting.size[1], "px");
+  }
   doc.resizeImage(width, height, null, ResampleMethod.BICUBIC);
 
   if (exportSetting.directSave) {
